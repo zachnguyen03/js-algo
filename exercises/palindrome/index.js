@@ -1,3 +1,4 @@
+const isDone = true
 // --- Directions
 // Given a string, return true if the string is a palindrome
 // or false if it is not.  Palindromes are strings that
@@ -7,6 +8,11 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+    const revString = str.split("")
+                   .reverse()
+                   .join("");
+    return revString === str;
+}
 
 module.exports = palindrome;

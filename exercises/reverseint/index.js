@@ -1,3 +1,4 @@
+const isDone = true;
 // --- Directions
 // Given an integer, return an integer that is the reverse
 // ordering of numbers.
@@ -8,6 +9,13 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {}
+function reverseInt(n) {
+    const revInt = n.toString().split("").reverse().join("");
+    if(n >= 0) {
+        return parseInt(revInt)
+    } else {
+        return parseInt(revInt) * -1
+    }
+}
 
 module.exports = reverseInt;
